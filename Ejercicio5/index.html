@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Victor Mariscal" />
+    <meta name="description" content="Administrador de productos usando IndexedDB" />
+    <title>Ejercicio 5: IndexedDB - Administrador de Productos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Administrador de Productos</h1>
+
+        <!-- Tabla de productos existentes -->
+        <section class="productos-section">
+            <h2>Productos Registrados</h2>
+            <table id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cantidad</th>
+                        <th>Precio/Unidad</th>
+                        <th>Marca</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyProductos">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulario para añadir productos -->
+        <section class="formulario-section">
+            <h2>Emplea el siguiente formulario para añadir productos:</h2>
+
+            <form id="formularioProducto">
+                <div class="form-group">
+                    <label for="item">Nombre del producto:</label>
+                    <input type="text" id="item" name="item" placeholder="Item">
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Número de unidades:</label>
+                    <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad">
+                </div>
+
+                <div class="form-group">
+                    <label for="precioUnidad">Precio por unidad:</label>
+                    <input type="number" id="precioUnidad" name="precioUnidad" placeholder="Precio" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="marca">Marca del producto:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Marca">
+                </div>
+
+                <button type="submit" class="btn-submit">Añadir Producto</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/Producto.js"></script>
+    <script src="js/ManejadorDB.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
